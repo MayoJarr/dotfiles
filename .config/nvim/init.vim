@@ -32,7 +32,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "hi CursorLine cterm=NONE ctermbg=180
-
+set title
 
 call plug#begin()
 "Plug 'ycm-core/YouCompleteMe'
@@ -55,6 +55,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 let g:airline_theme='base16_dracula'
@@ -89,6 +90,15 @@ nnoremap <A-k> <C-w>+
 
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bprev<CR>
+
+"nnoremap <F3> :sp<CR>:term<CR>i make && ./a.out<CR>
+nnoremap <F3> :FloatermNew --autoclose=0 make && ./a.out<CR>
+
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <M-[> <Esc>
+  tnoremap <C-v><Esc> <Esc>
+endif
 
 "nnoremap <F3> <C-|>&&<C-n>
 "hi Normal guibg=NONE ctermbg=NONE

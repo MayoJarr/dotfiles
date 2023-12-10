@@ -33,4 +33,4 @@ lv() {
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[34m\]\w\[\e[m\]\n\[\e[36m\]>\[\e[m\] '
 
-bat ~/Documents/orgNotes/todo.org
+bat ~/Sync/todo.org
