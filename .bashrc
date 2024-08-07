@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias ll='ls -la --color=auto'
+alias ll='lsd -la --color=auto'
 
 alias em="~/Documents/scripts/monitorSetup.sh"
 alias xbi="xbacklight +10%"
@@ -20,6 +20,8 @@ alias boff="sudo systemctl stop bluetooth"
 
 alias v="nvim"
 alias smci="sudo make clean install"
+alias ndw="nmcli device wifi"
+alias gnc="zathura /home/jmajecki/Documents/pdfs/science/Giancoli\ -\ Physics\ \(6th\).pdf"
 xb() {
 	xbacklight "$1"
 }
@@ -33,4 +35,4 @@ lv() {
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[34m\]\w\[\e[m\]\n\[\e[36m\]>\[\e[m\] '
 
-bat ~/Sync/todo.org
+#bat ~/Sync/todo.org

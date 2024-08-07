@@ -29,5 +29,8 @@ done &
 
 nitrogen --restore &
 picom &
-exec /usr/local/bin/dwm 
+dunst &
+sh /home/jmajecki/Documents/scripts/second.sh &
+exec /usr/local/bin/dwm
+#exec /home/jmajecki/Downloads/tinywm/tinywm
 #i3
